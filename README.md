@@ -41,3 +41,7 @@
     --implementação para add tipos em lib/tasks
     --add ao cadastro de contatos ->  kind: Kind.all.sample
 }
+
+#Adicionando relacionamento belongs_to e has_many nos models Contact e Kind respectivamente
+
+#Adicionando validações nos models Contact e Kind

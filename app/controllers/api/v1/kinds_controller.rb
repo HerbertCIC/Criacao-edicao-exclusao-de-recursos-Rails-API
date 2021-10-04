@@ -17,7 +17,7 @@ module Api
         @kind = Kind.new(kind_params)
 
         if @kind.save
-          render json: @kind, status: :created, location: @kind
+          render json: @kind, status: :created, location: api_v1_kinds_path
         else
           render json: @kind.errors, status: :unprocessable_entity
         end

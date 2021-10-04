@@ -17,7 +17,7 @@ module Api
         @contact = Contact.new(contact_params)
 
         if @contact.save
-          render json: @contact, status: :created, location: @contact
+          render json: @contact, status: :created, location: api_v1_contacts_path
         else
           render json: @contact.errors, status: :unprocessable_entity
         end
@@ -42,7 +42,7 @@ module Api
       end
 
       def contact_params
-        params.require(:contact).permit(:name, :email, :birthdate)
+        params.require(:contact).permit(:name, :email, :birthdate, :kind_id)
       end
     end
   end
